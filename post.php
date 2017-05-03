@@ -14,7 +14,7 @@ echo "<br>";
 $name = $_POST['fname'];
 echo "姓名:".$name;
 echo "<br>";
-//获取get方式请求的变量 eg:http://127.0.0.1/post.php?kevin=111
+//获取get方式请求的变量 eg:http://127.0.0.1/post.php?kevin=111ddddddd
 echo "kevin变量值是:".$_GET['kevin'];
 ?>
 </body>
