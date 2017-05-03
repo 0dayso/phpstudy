@@ -33,6 +33,8 @@ function test1(){
 test1();
 test1();
 test1();
+
+//超全局变量,通过
 //函数传参数
 echo "<br>";
 for($i=0;$i<=500;$i++){
