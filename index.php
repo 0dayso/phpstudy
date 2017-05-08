@@ -1,4 +1,9 @@
 <?php
+include "include.php";
+//include 引入了一个不存在的文件脚本可继续执行
+include "noexist.php";
+//使用require则不然
+require "include.php";
 echo "helloworld";
 echo "<br>";
 $x = 5;
@@ -128,4 +133,35 @@ echo $_SERVER['PHP_SELF'];
 echo "<br>";
 echo $_SERVER['SCRIPT_NAME'];
 echo $_SERVER['GATEWAY_INTERFACE'];
+echo "<br>";
+//preg_match 匹配到返回1,匹配不到返回0
+$aa = preg_match("/php/","php is the best language");
+echo $aa."<br>";
+echo "!!!!!!";
+preg_match('/(foo)(bar)(baz)/', 'foobarbaz', $matches1, PREG_OFFSET_CAPTURE);
+//print_r($matches1);
+preg_match("/^(http:\/\/).*?([^\/]+)/i","http://www.php.net/index.html", $matches);
+print_r($matches);
+echo $matches[2];
+echo "###########<br>";
+preg_match("/^(http:\/\/)?([^\/]+)/i","http://www.jb51.net/index.html", $matches2);
+echo $matches2[2];
+echo "###########<br>";
+//多维数组
+$cars = array(
+    array('bwm',12,28),
+    array('volvo',24,23),
+    array('audio',35,90)
+);
+echo $cars[0][0]."库存:".$cars[0][1];
+echo $cars[1][0]."库存:".$cars[1][1];
+echo $cars[2][0]."库存:".$cars[2][1];
+echo "#############<br>";
+echo date("Y-m-d");
+echo date("Y/m/d");
+echo date("h:i:sa");
+date_default_timezone_set('Asia/Shanghai');
+echo date("h:i:sa");
+$da = strtotime("10:38pm April 15 2015");
+echo "创建日期是:".date("Y-m-d h:i:sa",$da);
 ?>
