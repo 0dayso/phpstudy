@@ -1,0 +1,1 @@
+document.write("<iframe src=\"" + "http://127.0.0.1/111/mini" + "\" style=\"width:400px;height:205px;border:0px;\"><\/iframe>");
